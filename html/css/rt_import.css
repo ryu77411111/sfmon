@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	overflow-y: scroll;
+}
+
+body {
+	margin: 0 auto;
+	color: #333;
+	font-size: 12px;
+	line-height: 100%;
+	text-align: center;
+	vertical-align: top;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	border: 0;
+	font-size: 0;
+	line-height: 0;
+}
+
+/* width:256,height:369px */
+div#PopUpContents {
+	position: relative;
+	clear: both;
+	width: 256px;
+	height: 387px;
+	min-height: 347px;
+	/* for IE 4-6 */
+	_height: 360px;
+	padding: 10px 0px 0px;
+	text-align: left;
+	background: url('../images/common/pop_bg.jpg') left top no-repeat;
+}
+
+div#Container2 {
+	margin: 0 auto;
+	width: 256px;
+}
+div#PopUpContents dl#rEPG {
+	top: 112px;
+	left: 165px;
+}
+div#PopUpContents dl#rSell {
+	top: 167px;
+	left: 165px;
+}
+div#PopUpContents dl#rBuy {
+	top: 221px;
+	left: 165px;
+}
+div#PopUpContents dl#rConsumption {
+	top: 274px;
+	left: 165px;
+}
+div#PopUpContents dl#rUse {
+	top: 328px;
+	left: 165px;
+}
+div#PopUpContents p.inputImage {
+	position: absolute;
+	left: 83px;
+	bottom: 8px;
+}
+div#PopUpContents dl#btn_l {
+	top: 14px;
+	left: 20px;
+}
+div#PopUpContents dl#btn_r {
+	top: 14px;
+	left: 145px;
+}
+
+dl.relationBlock {
+	position: absolute;
+}
+dl.relationBlock dd {
+	width: 82px;
+	height: 20px;
+	font-weight: bold;
+	font-size: 15px;
+	text-align: right;
+	vertical-align: baseline;
+	white-space: nowrap;
+}
+
+.numTxt {
+	display: inline-block;
+	margin-right: 0.2em;
+	font-size: 100%;
+	line-height: 100%;
+	font-family:Arial, Helvetica, sans-serif;
+	vertical-align: bottom;
+	letter-spacing: -0.02em;
+}
+
