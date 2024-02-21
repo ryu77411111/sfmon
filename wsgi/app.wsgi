@@ -9,6 +9,7 @@ import sys
 import json
 import traceback
 import urllib.request
+from contextlib import closing
 
 TEMPLATE=('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">'
 '<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja" dir="ltr">'
@@ -85,7 +86,7 @@ def getshiyo(jobj):
 
 def getweb(url):
     req = urllib.request.Request(url)
-    with urllib.request.urlopen(req) as res:
+    with closing(urllib.request.urlopen(req)) as res:
         mobj = re.search(r'{.*}', res.read().decode())
         jobj = json.loads(mobj.group())
         return jobj
