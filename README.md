@@ -6,11 +6,13 @@
 ソーラーフロンティアモニターのリアルタイム表示をホームサーバーより直接取得しWeb表示します。
 
 ホームサーバー, SF2MHS-1001  
+
 <https://www.solar-frontier.com/jpn/products/manual.html>
 
 ソーラーフロンティア  
 フロンティアモニター ホームエネルギーモニタリングサービス  
-リアルタイム表示部分の代替機能になります。  
+リアルタイム表示部分の代替機能になります。
+※JQuery版を追加しました。
 <https://www.frontier-monitor.com/persite/top>
 
 ![preview](preview.png)
@@ -49,7 +51,7 @@ $ systemctl reload apache2
 
 ------------------------------------------------
 # ホームサーバのIPアドレス設定
-app.wsgiの最初の行へホームサーバのIPアドレスを設定する
+app.wsgi, appjq.wsgiの最初の行へホームサーバのIPアドレスを設定する
 <pre>
 IP_ADDRESS='192.168.0.xxx'
 </pre>
@@ -80,12 +82,16 @@ $ tree /var/www/
 │   │   └── manu_in.png
 │   └── index.html
 └── wsgi
-    └── app.wsgi
+    ├── app.wsgi
+    └── appjq.wsgi
 </pre>
 
 以下にアクセスして表示されればOK  
-
+HTMLのみ版
 <http://localhost/py>
+
+JQuery版
+<http://localhost/jq>
 
 ------------------------------------------------
 おまけ：画像ファイルの差し替え
